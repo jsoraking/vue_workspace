@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;200702_index&apos; to &apos;200702_vue&apos;" description="Rename resource &apos;200702_index&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/200702_index" name="200702_vue" stamp="1593759602514" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;200702_vue&apos; to &apos;vue&apos;" description="Rename resource &apos;200702_vue&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/200702_vue" name="vue" stamp="1593759762602" updateReferences="true"/>
+</session>

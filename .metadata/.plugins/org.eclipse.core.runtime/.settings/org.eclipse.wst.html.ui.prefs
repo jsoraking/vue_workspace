@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+newFileTemplateName=vueJs
+org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="html_new" deleted\="false" description\="" enabled\="true" name\="vueJs">&lt;\!DOCTYPE html&gt;&\#13;\r\n&lt;html&gt;&\#13;\r\n&lt;head&gt;&\#13;\r\n&lt;meta charset\="utf-8"&gt;&\#13;\r\n&lt;title&gt;vue.js&lt;/title&gt;&\#13;\r\n&lt;script src\="https\://unpkg.com/vue"&gt;&lt;/script&gt;&\#13;\r\n&lt;/head&gt;&\#13;\r\n&lt;body&gt;&\#13;\r\n&\#13;\r\n&\#13;\r\n&lt;/body&gt;&\#13;\r\n&lt;/html&gt;</template></templates>

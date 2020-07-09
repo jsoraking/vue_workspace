@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue.js</title>
+<script src="https://unpkg.com/vue"></script>
+<script>
+window.onload = function(){
+	var test1 = new Vue({
+		el:'#test1',
+		data : {
+			str1: '문자1',
+			int1 : 100,
+			float1 : 11.11
+		}
+		
+	})
+	var test2 = new Vue({
+		el:'.test2',
+		data : {
+			str2: '문자2',
+			int2 : 200,
+			float2 : 22.22
+		}
+		
+	})
+}
+</script>
+</head>
+<body>
+<div id="test1">
+	<h1>{{str1}}</h1>
+	<h2>{{int1}}</h2>
+	<h3>{{float1}}</h3>
+</div>
+
+<hr />
+
+<div class="test2">
+	<h1>{{str2}}</h1>
+	<h2>{{int2}}</h2>
+	<h3>{{float2}}</h3>
+</div>
+<hr />
+<div class="test2">
+	<h1>{{str2}}</h1>
+	<h2>{{int2}}</h2>
+	<h3>{{float2}}</h3>
+</div>
+<hr />
+</body>
+</html>

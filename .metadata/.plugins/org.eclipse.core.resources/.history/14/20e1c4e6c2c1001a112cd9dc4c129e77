@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue.js</title>
+<script src="https://unpkg.com/vue"></script>
+<script>
+window.onload = function(){
+	var test1 = new Vue({
+		el:'#test1',
+		data : {
+			str1: '문자1',
+			int1 : 100,
+			float1 : 11.11
+		}
+		
+	});
+	var test2 = new Vue({
+		el:'.test2',
+		data : {
+			str2: '문자2',
+			int2 : 200,
+			float2 : 22.22
+		}
+		
+	});
+	var test2 = new Vue({
+		el:'#test3',
+		data : {
+			int3: 100,
+			float3 : 11.11,
+			str3 : '문자열3',
+			boolean3 : true,
+			array3: [10, 20, 30],
+			object3 : {
+				a1 : 'a1 문자열',
+				a2 : 'a2 문자열',
+			}
+		}
+		
+	})
+	console.log(test2.int3)
+}
+</script>
+</head>
+<body>
+<div id="test1">
+	<h1>{{str1}}</h1>
+	<h2>{{int1}}</h2>
+	<h3>{{float1}}</h3>
+</div>
+
+<hr />
+
+<div class="test2">
+	<h1>{{str2}}</h1>
+	<h2>{{int2}}</h2>
+	<h3>{{float2}}</h3>
+</div>
+<hr />
+
+
+<div id="test3">
+	<h1>{{int3}}</h1>
+	<h2>{{float3}}</h2>
+	<h3>{{str3}}</h3>
+	<h3>{{boolean3}}</h3>
+	<h4>{{array3[0]}}</h4>
+	<h5>{{array3[1]}}</h5>
+	<h6>{{array3[2]}}</h6>
+	<p>{{object3.a1}}</p>
+	<p>{{object3.a2}}</p>
+</div>
+</body>
+</html>

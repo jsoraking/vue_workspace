@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue.js</title>
+<script src="https://unpkg.com/vue"></script>
+<script>
+window.onload = function(){
+	var test1 = new Vue({
+		el:'#test1',
+		data : '호호호'
+		
+	})
+}
+</script>
+</head>
+<body>
+<div id="test1"></div>
+</body>
+</html>
