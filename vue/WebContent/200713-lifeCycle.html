@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue.js</title>
+<script src="https://unpkg.com/vue"></script>
+<script>
+	window.onload = function() {
+		var vm1 = new Vue({
+			//el : '#test1',
+			data : {
+				a1 : 100
+			},
+			//vue객체가 관리할 요소들이 만들어지전에 호출되는 함수
+			beforeCreate : function() {
+				console.log("vue객체가 관리할 요소들이 만들어지 전입니다.")
+				console.log('a1:' + this.a1) //undefined
+			},
+			//vue객체가 관리할 요소들이 만들어지고 난 이후
+			created : function() {
+				console.log("vue객체가 관리할 요소들이 만들어 진 후 입니다.")
+				console.log('a1:' + this.a1)
+			},
+			//vue객체가 관리할 html 태그가 할당되기 전
+			beforMount : function() {
+				console.log("vue객체가 관리할 태그가 할당 되기 전 입니다.")
+			},
+			//vue객체가 관리할 html 태그가 할당된 후
+			monuted : function() {
+				console.log("vue객체가 관리할 태그가 할당 된 이후 입니다.")
+			},
+			beforeUpdate : function() {
+				console.log("관리하고 있는 html 요소 내부가 변경되기 전 입니다.")
+			},
+			updated : function() {
+				console.log("관리하고 있는 html 요소 내부가 변경된 후 입니다.")
+			},
+			beforeDestroy: function(){
+				console.log("vue 객체의 기능이 소멸되기 전 입니다.")
+			},
+			destroy: function(){
+				console.log("vue 객체의 기능이 소멸된 후 입니다.")
+			},
+			methods : {
+				setValue : function() {
+					this.a1 = 200
+				}
+			}
+
+		})
+		
+		//vm1.$mount('#test1') //함수로 선언가능
+		
+		//vue 객체에 마운트(할당) 된 태그를 관리하는 요소를 소멸시킨다.
+		vm1.$destroy()
+		
+		//vue 객체에 디스토리(소멸) 된 태그를 다시 마운트(할당) 시킨다.
+		vm1.$mount('#test1') //함수로 선언가능
+	}
+</script>
+</head>
+<body>
+	<div id="test1">
+		<h3>{{a1}}</h3>
+		<button type="button" v-on:click='setValue'>값변경</button>
+	</div>
+</body>
+</html>
