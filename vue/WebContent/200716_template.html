@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        window.onload = function () {
+            var test1 = new Vue({
+                el: '#test1',
+                data: {
+                    a1: '문자열1',
+                    a2: '문자열2',
+                    a3: '<h3>문자열3</h3>',
+                    a4: 'img/logo.png',
+                    a5: 172,
+                    a6: 35,
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="test1">
+    <h3>{{a1}}</h3>
+    <h3>{{a2}}</h3>
+    <div>{{a3}}</div>
+    <div v-html="a3"></div>
+    <!--<img src="{{a4}}" alt=""><br>-->
+    <img v-bind:src="a4" v-bind:width="a5" v-bind:height="a6">
+</div>
+</body>
+</html>

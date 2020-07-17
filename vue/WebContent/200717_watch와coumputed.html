@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        window.onload = function () {
+            var test1 = new Vue({
+                el: '#test1',
+                data: {
+                    data1: 'aaa',
+                    data2: 'bbb',
+                    result1: ''
+                },
+                watch: {
+                    data1: function () {
+                        this.result1 = 'data1 : ' + this.data1 + ', data2 : ' + this.data2
+                    },
+                    data2: function () {
+                        this.result1 = 'data1 : ' + this.data1 + ', data2 : ' + this.data2
+                    }
+                },
+                computed: {
+                    result2: function () {
+                        return 'data1 : ' + this.data1 + ', data2 : ' + this.data2
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="test1">
+    <!--    <h3>data1 : {{data1}}</h3>-->
+    <!--    <h3>data2 : {{data2}}</h3>-->
+    data1 : <input type="text" v-model="data1"> <br>
+    data2 : <input type="text" v-model="data2"> <br>
+    <h3>result1 : </h3>
+    <div>{{result1}}</div>
+    <h3>result2 : </h3>
+    <div>{{result2}}</div>
+</div>
+
+<h2> watch 대신 computed를 사용하면 반복된 코드를 하나로 통합할 수 있다.</h2>
+
+</body>
+</html>

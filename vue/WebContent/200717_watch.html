@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        window.onload = function () {
+            var test1 = new Vue({
+                el: '#test1',
+                data: {
+                    a1: '',
+                    a2: '',
+                    a3: ''
+                },
+                watch: {
+                    //변수 a1를 감시하는 watch 설정
+                    a1: function (newVal, oldVal) {
+                        console.log('새로운 값 :' + newVal, '이전의 값 : ' + oldVal)
+                        this.a3 = 'a1 :' + newVal
+                    },
+                    //변수 a2를 감시하는 watch 설정
+                    a2: function (newVal, oldVal) {
+                        console.log('새로운 값 :' + newVal, '이전의 값 : ' + oldVal)
+                        this.a3 = 'a2 : ' + newVal
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="test1">
+    input1 : <input type="text" v-model="a1"><br>
+    input2 : <input type="text" v-model="a2"><br>
+    <h3>{{a1}}</h3>
+    <h3>{{a2}}</h3>
+    <h3>{{a3}}</h3>
+</div>
+
+</body>
+</html>

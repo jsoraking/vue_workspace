@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        window.onload = function () {
+            var vm1 = new Vue({
+                el: '#test1',
+                data: {
+                    a1: 100,
+                    a2: 200
+                },
+                methods: {
+                    test_method: function () {
+                        console.log('test_method');
+                        return this.a1 + this.a2
+                    },
+                    setValue: function () {
+                        this.a1 = 1000,
+                        this.a2 = 2000
+                    },
+                    getRandomMethod : function () {
+                        return Math.random()
+                    }
+                },
+                computed : {
+                    test_computed: function () {
+                        console.log('test_computed');
+                        return this.a1 + this.a2
+                    },
+                    getRandomComputed : function () {
+                        return Math.random()
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="test1">
+    <h3>a1 : {{a1}}</h3>
+    <h3>a2 : {{a2}}</h3>
+    <h3>a1 + a2 : {{a1+ a2}}</h3>
+    <h3>test method : {{test_method()}}</h3>
+    <h3>test method : {{test_method()}}</h3>
+    <h3>test method : {{test_method()}}</h3>
+    <h3>test computed : {{test_computed}}</h3>
+    <h3>test computed : {{test_computed}}</h3>
+    <h3>test computed : {{test_computed}}</h3>
+
+    <button type="button" v-on:click="setValue">값변경</button>
+
+    <ul>
+        <li>
+            method: 반환하는 값이 계속 같아도 함수가 계속 호출된다 / 값을 메모리에 캐싱하지않는다.
+        </li>
+        <li>
+            computed : 반환하는 값이 변하지 않았다면 이전에 반환한 값을 기억해 두었다가 그 값을 그대로 사용한다./ 값을 메모리에 캐싱한다.
+        </li>
+    </ul>
+
+    <h3>get random method : {{getRandomMethod()}}</h3>
+    <h3>get random method : {{getRandomMethod()}}</h3>
+    <h3>get random method : {{getRandomMethod()}}</h3>
+
+    <h3>get random Computed : {{getRandomComputed}}</h3>
+    <h3>get random Computed : {{getRandomComputed}}</h3>
+    <h3>get random Computed : {{getRandomComputed}}</h3>
+
+</div>
+</body>
+</html>
